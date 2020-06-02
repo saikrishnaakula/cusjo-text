@@ -1,0 +1,36 @@
+<h5>ToolBar: </h5>
+<p>
+ Highlight the text and choose the settings in toolbar</p>
+<div class="card">
+<div class="card-body">
+  <span class="card-title font-weight-bold">Heading Size</span>
+  <ul class="list-group list-group-horizontal">
+  <li (click)="changeStyle('h1')" class="btn btn-outline-primary list-group-item">H1</li>
+  <li (click)="changeStyle('h2')" class="btn btn-outline-primary list-group-item">H2</li>
+  <li (click)="changeStyle('h3')" class="btn btn-outline-primary list-group-item">H3</li>
+  <li (click)="changeStyle('h4')" class="btn btn-outline-primary list-group-item">H4</li>
+  <li (click)="changeStyle('h5')" class="btn btn-outline-primary list-group-item">H5</li>
+</ul>
+</div>
+</div>
+<div class="card">
+<div class="card-body">
+  <span class="card-title font-weight-bold">Font Styling</span>
+  <ul class="list-group list-group-horizontal">
+  <li (click)="changeStyle('strong')" class="btn btn-outline-primary list-group-item">B</li>
+  <li (click)="changeStyle('em')" class="btn btn-outline-primary  list-group-item font-italic">I</li>
+  <li (click)="changeStyle('u')" class="btn btn-outline-primary  list-group-item font-underline"><u>U</u></li>
+  <li (click)="changeStyle('s')" class="btn btn-outline-primary  list-group-item"><s>S</s></li>
+</ul>
+</div>
+<div class="card">
+<div class="card-body">
+  <span class="card-title font-weight-bold">Font Size: <input [(ngModel)]="fontSize"  class="form-control form-control-sm text-uppercase" type="number"
+            name="font-size" id="font-size"></span>
+   <span class="card-title font-weight-bold">Font color: <input  class="form-control form-control-sm text-uppercase" [(colorPicker)]="color" [cpPosition]="'top'" [style.background]="color"/></span>         
+</div>
+<h5>Body:</h5>
+<div class="card">
+ <div class="card-body" contentEditable="true" [innerHTML]="text"> 
+</div>
+</div>
